@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realty Hub</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom CSS */
+      body {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+      }
+      .jumbotron {
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 250px 0;
+        cursor: pointer; /* Menjadikan kursor menjadi pointer saat diarahkan ke jumbotron */
+      }
+      .jumbotron h1 {
+        font-size: 5rem;
+      }
+      .feature-box {
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .feature-box i {
+        font-size: 3rem;
+        color: red;
+      }
+      /* New CSS for header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        background-color: black;
+        color: white;
+      }
+      .header-left {
+        flex: 1;
+      }
+      .header-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1;
+      }
+      .header-right a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+        position: relative;
+      }
+      .header-right a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        bottom: -4px;
+        left: 0;
+        transition: width 0.3s ease;
+      }
+      .header-right a:hover::after {
+        width: 0%;
+      }
+      /* New CSS for footer */
+      footer {
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <h1>Realty Hub</h1>
+      </div>
+      <div class="header-right">
+        <a href="#" class="nav-link">Beli</a>
+        <a href="#" class="nav-link">Sewa</a>
+        <a href="#" class="nav-link">Jual</a>
+        <a href="#" class="nav-link">Join/Sign In</a>
+      </div>
+    </div>
+
+    <div class="jumbotron" id="jumbotron">
+      <h1>Realty Hub</h1>
+      <p>
+        Kami menyediakan solusi properti yang terpercaya untuk kebutuhan Anda.
+      </p>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Listing Properti</h2>
+          <p>
+            Temukan berbagai macam properti yang tersedia untuk dijual atau
+            disewakan.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img
+            src="https://source.unsplash.com/1600x900/?house"
+            class="img-fluid float-right"
+            alt="House Image"
+          />
+        </div>
+      </div>
+
+      <!-- Tambahkan bagian JavaScript untuk fitur ganti foto -->
+      <script>
+        var jumbotron = document.getElementById("jumbotron");
+        var images = [
+          "https://source.unsplash.com/1600x900/?apartment",
+          "https://source.unsplash.com/1600x900/?building",
+          "https://source.unsplash.com/1600x900/?architecture",
+        ];
+        var currentIndex = 0;
+
+        // Fungsi untuk mengubah gambar jumbotron saat diklik
+        function changeImage() {
+          currentIndex++;
+          if (currentIndex >= images.length) {
+            currentIndex = 0;
+          }
+          jumbotron.style.backgroundImage =
+            "url('" + images[currentIndex] + "')";
+        }
+
+        // Menambahkan event listener untuk mengubah gambar saat jumbotron diklik
+        jumbotron.addEventListener("click", changeImage);
+      </script>
+
+      <div class="row flex-row-reverse mt-5">
+        <div class="col-lg-6">
+          <h2>Pencarian Mudah</h2>
+          <p>
+            Gunakan alat pencarian kami untuk menemukan properti sesuai dengan
+            kebutuhan Anda.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img
+            src="https://source.unsplash.com/1600x900/?rooom"
+            class="img-fluid"
+            alt="Rooom Image"
+          />
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-lg-6">
+          <h2>Profesionalisme</h2>
+          <p>
+            Kami memiliki tim yang berpengalaman dan siap membantu Anda dalam
+            setiap langkah transaksi properti.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img
+            src="https://source.unsplash.com/1600x900/?house-interior"
+            class="img-fluid float-right"
+            alt="House_interior Image"
+          />
+        </div>
+      </div>
+
+      <div class="row flex-row-reverse mt-5">
+        <div class="col-lg-6">
+          <h2>Solusi Properti yang Terpercaya</h2>
+          <p>
+            Temukan berbagai macam properti yang tersedia untuk dijual atau
+            disewakan melalui Realty Hub. Kami menyediakan layanan yang dapat
+            diandalkan untuk memenuhi kebutuhan Anda dalam mencari properti
+            impian.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img
+            src="https://source.unsplash.com/1600x900/?realtor"
+            class="img-fluid"
+            alt="Realtor Image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Selamat Datang di Realty Hub</h2>
+          <p>
+            Dengan tim berpengalaman kami, kami siap membantu Anda dalam setiap
+            langkah transaksi properti. Percayakan kebutuhan properti Anda
+            kepada kami dan rasakan kenyamanan serta kepercayaan yang kami
+            berikan.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <!-- Form Pertanyaan -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Punya Pertanyaan?</h5>
+              <p class="card-text">
+                Bebas bertanya kepada kami. Kami disini untuk membantu.
+              </p>
+              <form>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Nama Anda"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email Anda"
+                  />
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    class="form-control"
+                    placeholder="Pertanyaan Anda"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Tentang Kami</h3>
+            <p>
+              Realty Hub adalah platform properti online yang menyediakan solusi
+              lengkap untuk kebutuhan Anda dalam mencari, membeli, atau menyewa
+              properti.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3>Kontak Kami</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Jl. Properti Indah No. 123,
+              Kota Metropolitan
+            </p>
+            <p><i class="fas fa-phone"></i> 0800-123-4567</p>
+            <p><i class="fas fa-envelope"></i> info@realtyhub.com</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Ikuti Kami</h3>
+            <p>Temukan kami di media sosial:</p>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>&copy; 2024 Realty Hub. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
